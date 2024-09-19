@@ -25,12 +25,12 @@ struct CelciusConverter: View {
                     }
                     
                     Button(action: convert) {
-                        Label("", systemImage: "arrow.right.arrow.left.circle")
-                            .labelStyle(IconOnlyLabelStyle()) 
-                        
+                        Image(systemName: "arrow.right.arrow.left.circle")
+                            .labelStyle(IconOnlyLabelStyle())
                             .font(.system(size: 40))
                             .padding()
-                    }
+                            .foregroundColor(.blue)
+                    }.buttonStyle(PlainButtonStyle())
                     
                     VStack {
                         Text(isCelsiusToFahrenheit ? "Fahrenheit" : "Celsius")
